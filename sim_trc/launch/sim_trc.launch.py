@@ -66,6 +66,12 @@ def generate_launch_description():
             executable='joy_node',
     )
 
+    x3_sim_node= Node(
+        package= "sim_trc",
+        executable="x3_sim.py",
+        name="x3_sim"
+    )
+
     spawn_x_val = LaunchConfiguration('x_init')
     spawn_y_val = LaunchConfiguration('y_init')
     spawn_z_val = LaunchConfiguration('z_init')
@@ -90,5 +96,6 @@ def generate_launch_description():
     ld.add_action(x3_description_launch)
     ld.add_action(teleop_node)
     ld.add_action(joy_node)
+    ld.add_action(x3_sim_node)
     ld.add_action(spawn_entity_cmd)
     return ld

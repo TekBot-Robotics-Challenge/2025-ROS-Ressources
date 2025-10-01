@@ -72,7 +72,7 @@
   <gazebo>
       <plugin name="mecanum_controller" filename="libgazebo_ros_planar_move.so">
           <robotNamespace>/</robotNamespace>
-          <commandTopic>cmd_vel</commandTopic>
+          <commandTopic>/x3_sim/cmd_vel</commandTopic>
           <odometryTopic>odom</odometryTopic>
           <odometryFrame>odom</odometryFrame>
           <leftFrontJoint>front_left_joint</leftFrontJoint>
